@@ -109,5 +109,10 @@ public void testLargeExponent() {
     public void testNegativeBaseLargeExponent() {
         assertEquals(-2, Npctubes.CariNilaiPangkat(-2, 20));
     }
+    
+@Test
+    public void testMaxBase() {
+        assertEquals(-2, Npctubes.CariNilaiPangkat(200, 2));
+    }
 
 }
