@@ -120,4 +120,9 @@ public void testLargeExponent() {
         assertEquals(-2, Npctubes.CariNilaiPangkat(2, 200));
     }
 
+@Test
+    public void testBothLimitsExceeded() {
+        assertEquals(-2, Npctubes.CariNilaiPangkat(200, 200));
+    }
+
 }
