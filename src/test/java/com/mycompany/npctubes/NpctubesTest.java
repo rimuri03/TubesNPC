@@ -115,4 +115,9 @@ public void testLargeExponent() {
         assertEquals(-2, Npctubes.CariNilaiPangkat(200, 2));
     }
 
+@Test
+    public void testMaxExponent() {
+        assertEquals(-2, Npctubes.CariNilaiPangkat(2, 200));
+    }
+
 }
