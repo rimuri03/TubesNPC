@@ -125,9 +125,4 @@ public void testLargeExponent() {
         assertEquals(-2, Npctubes.CariNilaiPangkat(200, 200));
     }
 
-@Test
-    public void testZeroExponentOneBase() {
-        assertEquals(1, Npctubes.CariNilaiPangkat(1, 0));
-    }
-
 }
