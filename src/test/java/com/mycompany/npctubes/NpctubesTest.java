@@ -99,8 +99,15 @@ public class NpctubesTest {
     public void testBaseTen() {
         assertEquals(100000, Npctubes.CariNilaiPangkat(10, 5));
     }
-
+    
+@test
 public void testLargeExponent() {
         assertEquals(-2, Npctubes.CariNilaiPangkat(2, 20));
     }
+
+@Test
+    public void testNegativeBaseLargeExponent() {
+        assertEquals(-2, Npctubes.CariNilaiPangkat(-2, 20));
+    }
+
 }
