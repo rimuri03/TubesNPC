@@ -73,4 +73,56 @@ public class NpctubesTest {
         assertEquals(1, Npctubes.CariNilaiPangkat(-1, 2));
         assertEquals(-1, Npctubes.CariNilaiPangkat(-1, 3));
     }
+
+@Test
+    public void testExtremeValues() {
+        assertEquals(-2, Npctubes.CariNilaiPangkat(Integer.MAX_VALUE, 2));
+        assertEquals(-2, Npctubes.CariNilaiPangkat(2, Integer.MAX_VALUE));
+    }
+
+@Test
+    public void testPowerOfTwo() {
+        assertEquals(4, Npctubes.CariNilaiPangkat(2, 2));
+    }
+
+@Test
+    public void testPowerOfThree() {
+        assertEquals(27, Npctubes.CariNilaiPangkat(3, 3));
+    }
+
+@Test
+    public void testPowerOfFive() {
+        assertEquals(125, Npctubes.CariNilaiPangkat(5, 3));
+    }
+
+@Test
+    public void testBaseTen() {
+        assertEquals(100000, Npctubes.CariNilaiPangkat(10, 5));
+    }
+    
+@test
+public void testLargeExponent() {
+        assertEquals(-2, Npctubes.CariNilaiPangkat(2, 20));
+    }
+
+@Test
+    public void testNegativeBaseLargeExponent() {
+        assertEquals(-2, Npctubes.CariNilaiPangkat(-2, 20));
+    }
+    
+@Test
+    public void testMaxBase() {
+        assertEquals(-2, Npctubes.CariNilaiPangkat(200, 2));
+    }
+
+@Test
+    public void testMaxExponent() {
+        assertEquals(-2, Npctubes.CariNilaiPangkat(2, 200));
+    }
+
+@Test
+    public void testBothLimitsExceeded() {
+        assertEquals(-2, Npctubes.CariNilaiPangkat(200, 200));
+    }
+
 }
