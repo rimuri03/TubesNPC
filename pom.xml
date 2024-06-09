@@ -4,7 +4,7 @@
     <groupId>com.mycompany</groupId>
     <artifactId>npctubes</artifactId>
     <version>1.0.0</version>
-    <packaging>jar</packaging>
+    <packaging>jar</packaging> 
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
